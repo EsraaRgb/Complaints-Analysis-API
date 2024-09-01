@@ -13,6 +13,7 @@ const corsOptions = {
 const appRouter = async (app) => {
   app.use(express.json());
   app.use(cors());
+  
   app.use("/roles", require("./role/router.js"));
   app.use("/users", require("./users/router"));
   app.use("/admins", require("./admin/router"));
@@ -27,6 +28,10 @@ const appRouter = async (app) => {
   app.use("/forwardedComplaints", require("./forwardedComplaints/router.js"));
   app.use("/clusters", require("./cluster/router.js"));
   app.use("/complaintDetails", require("./complaintDetails/router.js"));
+  app.use("/",(req, res, next) => {
+    res.status(200).json({ message: "Welcome to the API" });
+  });
+
   app.use("*", (req, res, next) => {
     next(
       new Error("In-valid Routing Plz check url  or  method", { cause: 404 })
