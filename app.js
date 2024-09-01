@@ -2,7 +2,7 @@ const express = require("express")
 const appRouter = require("./src/modules/index.router.js")
 
 const dotenv = require("dotenv")
-dotenv.config({ path: "./Config/.env" })
+dotenv.config({ path: ".env" })
 
 const port = process.env.PORT || 5000
 
