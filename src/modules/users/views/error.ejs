@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Error</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+      }
+
+      .card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .card-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-family: Arial, sans-serif;
+      }
+
+      .button {
+        display: inline-block;
+        background-color: #1e3a8a;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+      }
+
+      .button:hover {
+        background-color: #1c3267;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2 class="card-title">Oops! Something went wrong.</h2>
+      <p>
+        We're sorry, but there was an error processing your request. Please try
+        again later.
+      </p>
+      <!-- should be replaced with the frontend url -->
+      <a href="http://localhost:3000/" class="button">Go to homepage</a>
+    </div>
+  </body>
+</html>
